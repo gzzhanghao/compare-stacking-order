@@ -1,0 +1,83 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`stacking order fixtures > fixtures/descendant-stacking-context.html 1`] = `
+[
+  "<BODY>",
+  "#a",
+  "#c",
+  "#b",
+]
+`;
+
+exports[`stacking order fixtures > fixtures/flex-grid-inline.html 1`] = `
+[
+  "<BODY>",
+  "#a",
+  "#c",
+  "pre-text",
+  "#b",
+  "#d",
+  "post-text",
+]
+`;
+
+exports[`stacking order fixtures > fixtures/from-diff-path.html 1`] = `
+[
+  "<BODY>",
+  "#a",
+  "#c",
+  "#b",
+]
+`;
+
+exports[`stacking order fixtures > fixtures/inherits-priority.html 1`] = `
+[
+  "<BODY>",
+  "#c",
+  "#a",
+  "#b",
+  "pre-text",
+  "post-text",
+]
+`;
+
+exports[`stacking order fixtures > fixtures/negative-z-index.html 1`] = `
+[
+  "#c",
+  "<BODY>",
+  "#a",
+  "#b",
+]
+`;
+
+exports[`stacking order fixtures > fixtures/stacking-context.html 1`] = `
+[
+  "<BODY>",
+  "#a",
+  "#d",
+  "#b",
+  "#c",
+  "#e",
+]
+`;
+
+exports[`stacking order fixtures > fixtures/stacking-context-positioned.html 1`] = `
+[
+  "<BODY>",
+  "#a",
+  "#b",
+  "#c",
+]
+`;
+
+exports[`stacking order fixtures > fixtures/stacking-order.html 1`] = `
+[
+  "<BODY>",
+  "#d",
+  "#c",
+  "pre-text",
+  "#b",
+  "post-text",
+  "#a",
+]
+`;
