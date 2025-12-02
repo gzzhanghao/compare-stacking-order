@@ -47,7 +47,7 @@ jobs:
         with:
           commit: "chore: release v${{ env.NEW_VERSION }}"
           title: "Release v${{ env.NEW_VERSION }}"
-          publish: pnpm publish --access public
+          publish: pnpm publish --access public --provenance
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
