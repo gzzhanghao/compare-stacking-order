@@ -11,6 +11,10 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      pull-requests: write
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v6
@@ -37,7 +41,9 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm publish
+          commit: "chore: release v${{ env.NEW_VERSION }}"
+          title: "Release v${{ env.NEW_VERSION }}"
+          publish: pnpm publish --access public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
