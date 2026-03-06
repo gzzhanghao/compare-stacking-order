@@ -1,3 +1,4 @@
+import { isInTopLayer } from './top-layer';
 import { getEffectiveZIndex } from './z-index';
 
 const STACKING_CONTEXT_PROPS = [
@@ -86,10 +87,12 @@ export function createsStackingContext(el: Element) {
   }
 
   // Element placed into the top layer and its corresponding ::backdrop. Examples include fullscreen and popover elements.
-  // FIXME: implement
+  if (isInTopLayer(el)) {
+    return true;
+  }
 
   // Element that has had stacking context-creating properties (such as opacity) animated using @keyframes, with animation-fill-mode set to forwards.
-  // FIXME: implement
+  // @ignore
 
   return false;
 }
