@@ -1,5 +1,11 @@
 # compare-stacking-order
 
+## 0.1.2
+
+### Patch Changes
+
+- fd971ba: Create stacking context for top-layer elements
+
 ## 0.1.1
 
 ### Patch Changes
